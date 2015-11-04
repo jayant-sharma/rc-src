@@ -1,14 +1,20 @@
-###############################################################
-alias .='pwd'
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../..'
-alias gt='cd /home/jayant/devel/git_reps;pwd'
-alias v='vi'
-alias ll='ls -lart --color=auto'
-alias pl='cp /home/jayant/Templates/perl.pl'
-alias pm='cp /home/jayant/Templates/PerlModule.pm'
-alias ver='cp /home/jayant/Templates/verilog.v'
-alias vhd='cp /home/jayant/Templates/vhdl.vhd'
-alias mk='cp /home/jayant/Templates/Makefile'
-alias al='source /home/jayant/.alias'
+################## General Purpose #########################################################
+alias c "cat"
+alias d "diff"
+alias v "vi"
+alias vd "vimdiff"
+alias h 'history'
+alias w "wc -l"
+alias al "source ~jayants/.alias "
+alias lss "ls | sort"
+alias ls1 "ls -1"
+alias ll "ls -lart --color=tty"
+alias ld "ls -lart | grep ^d"
+alias lg "ls | grep "
+alias rd "rm -rf"
+alias . "pwd"
+alias .. "cd .."
+alias ... "cd ../.."
+alias .... "cd ../../.."
+alias setln "v ~/.vimrc < ~/utilities/dep/setlinesed >& /dev/null"
+alias unsetln "v ~/.vimrc < ~/utilities/dep/unsetlinesed >& /dev/null"
