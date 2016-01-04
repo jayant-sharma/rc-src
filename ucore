@@ -1,0 +1,37 @@
+tce-load -w -i cfdisk.tcz
+tce-load -w -i grub-0.97-splash.tcz
+sudo su
+
+fdisk -l
+cfdisk /dev/sda
+mkfs.ext4 /dev/sda1
+
+rebuildfstab
+mount /mnt/sda1
+mount /mnt/sr0
+
+mkdir -p /mnt/sda1/boot/grub
+mkdir -p /mnt/sda1/tce/optional
+
+cp -p /mnt/sr0/boot/core.gz /mnt/sda1/boot/
+cp -p /mnt/sr0/boot/vmlinuz /mnt/sda1/boot/
+cp -p /usr/lib/grub/i386-pc/* /mnt/sda1/boot/grub/
+touch /mnt/sda1/tce/mydata.tgz
+
+vi /mnt/sda1/boot/grub/menu.lst
+
+# Press i (enters insert mode) Enter the following:
+default 0
+timeout 0
+title MicroCore
+kernel /boot/vmlinuz quiet tce=sda1 home=sda1 opt=sda1 vga=791 user=jayant host=ucore
+initrd /boot/core.gz
+
+# In the grub prompt,
+root (hd0,0)
+setup (hd0)
+quit
+
+sudo reboot
+
+# filetool.sh -b; sudo poweroff
