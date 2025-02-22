@@ -22,4 +22,24 @@ export PATH
 # export XIL_IMPACT_USE_LIBUSB=1
 export XILINX=/opt/Xilinx/14.7/ISE_DS/ISE
 
+export prompt="[%{\033[1;35m%}%m%{\033[0m%} %c] $ "
+set ignoreeof
+set noclobber
+set notify
+set filec
+set autolist
+set nobeep
+set complete    = enhance
+set autologout  = 0
+set history     = 10000
+set savehist    = 10000
+set listmaxrows = 1000
+umask 022
+
 source ~/.alias
+
+clear
+echo ''
+
+
+
