@@ -36,7 +36,7 @@ set savehist    = 10000
 set listmaxrows = 1000
 umask 022
 
-source ~/.alias
+source ~/.alias.bashrc
 
 clear
 echo ''

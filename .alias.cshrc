@@ -1,12 +1,12 @@
+alias al "source ~/.alias.cshrc"
+alias cs "source ~/.cshrc"
 #### GENERAL
 alias a "alias"
-alias al "source ~/.alias "
 alias c "cat"
 alias .. "cd .."
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias cr "cp -rf"
-alias cs "source ~/.cshrc"
 alias ctar 'tar -cvf \!:1.tar \!:1'
 alias d "diff"
 alias dqr 'diff -q -r '
