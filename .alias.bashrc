@@ -48,7 +48,7 @@ alias duf='ncdu'
 ####=APPS
 alias scr1='screen -d -R -S DEBUG'
 alias term='screen -t csh -S DBG -T $TERM -A -xRR -O -U'
-alias tmux='/pkg/qct/software/gnu/tmux/2.3/bin/tmux'
+#alias tmux='/pkg/qct/software/gnu/tmux/2.3/bin/tmux'
 alias tmux0='tmux new -s DBG ; tmux new -s DEV'
 alias tmux1='tmux a -d -t DBG'
 alias tmux2='tmux a -d -t DEV'
@@ -65,6 +65,9 @@ alias gdel='git push origin :refs/tags/\!:1 ; git tag -d \!:1'
 alias gb='git branch'
 alias gdev='git checkout dev ; gpull dev'
 alias mdev="cd \!:1 ; gpull dev ; gpush 'Merged dev with master' master ; cd -"
+alias venv="source VENV/bin/activate"
+alias jn='nohup jupyter notebook &'
+
 
 
 
