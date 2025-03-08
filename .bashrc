@@ -74,6 +74,7 @@ if [ -f ~/.alias.bashrc ]; then
     source ~/.alias.bashrc
 fi
 
+source /home/jayant/git_repos/OpenROAD-flow-scripts/env.sh
 
 clear
 echo ''
